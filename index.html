@@ -1,108 +1,32 @@
-  <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial;}
-div {text-align: center;}
-
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
-
-
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-
-.tab button:hover {
-  background-color: #ddd;
-}
-
-
-.tab button.active {
-  background-color: #ccc;
-}
-
-
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-div {text-align: center;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
+    <h1>About Me</h1>
+    <p>
+    My name is Geoffrey Diapana you can call me "Fr3y"
+    </p>
+    <p>
+  I'm 19 years old and currently living in Davao City.
+</p>
+<p>
+  I like to trade and gamble
+</p>
 
+<h1>Favorites</h1>
+<p>Eat and cook steaks</p>
+<p>Play poker</p>
 
+<h1>Hobbies</h1>
+<p>Playing online games competitively </p>
+<p>I do Crypto and Currency trading</p>
 
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'About me')">About me</button>
-  <button class="tablinks" onclick="openCity(event, 'Favorites')">Favorites</button>
-  <button class="tablinks" onclick="openCity(event, 'Hobbies')">Hobbies</button>
-  <button class="tablinks" onclick="openCity(event, 'Talents')">Talents</button>
-  <button class="tablinks" onclick="openCity(event, 'Links')">Links</button>
-</div>
-
-<div id="About me" class="tabcontent">
-  <h3>About me</h3>
-  <p>My name is Geoffrey Diapana you can call me "Fr3y"</p>
-  <p>I'm 19 years old and currently living in Davao City.</p>
-  <p>I like to trade and gamble</p>
-</div>
-
-<div id="Favorites" class="tabcontent">
-  <h3>Favorites</h3>
-  <p>Eat and cook steaks</p> 
-  <p>Play poker</p>
-  <p>Travel</p> 
-</div>
-
-<div id="Hobbies" class="tabcontent">
-  <h3>Hobbies</h3>
-  <p>Playing online games competitively </p>
-    <p>I do Crypto and Currency trading</p>
-</div>
-<div id="Talents" class="tabcontent">
-    <h3>Talents</h3>
-    <p>Can listen while sleeping ^__^ </p>
-    <p>Give me 5k and I'll make it my 5k</p>
-  </div>
-
-  <div id="Links" class="tabcontent">
-    <h3>Github</h3>
-    <a href = https://github.com/freeeyyy12> Click me</a>
-    <h3>Trading Portoflio</h3>
-    <a href = https://www.metatrader4.com/en/trading-platform> Click me</a>
-  </div>
-
- <script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
+<h1>Talent</h1>
+<p>Give me 5k and I'll make it my 5k</p>
 
 </body>
-</html> 
+</html>
