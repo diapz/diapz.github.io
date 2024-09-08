@@ -1,3 +1,8 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -74,6 +79,7 @@ body {
     background-color: #feffff;
     color: black;
     border-radius: 100px;
+    cursor: pointer;
 }
 
 /* Intro Sec */
@@ -82,13 +88,13 @@ body {
     padding: 20px;
     background-color: #2b7a78;
     display: flex;
-    align-items: flex-start; /* Align items to the top */
+    align-items: flex-start; 
     justify-content: space-between;
 }
 
 .text-container {
-    max-width: 60%; /* Adjusted to leave space for the image */
-    margin-left: 10px; /* Space between the image and text */
+    max-width: 60%; 
+    margin-left: 10px; 
 }
 
 .circle-image {
@@ -134,6 +140,7 @@ body {
     padding: 20px;
     background-color: #2b7a78;
     margin-bottom: 30px;
+    padding-bottom: 70px;
 }
 
 .header {
@@ -164,6 +171,7 @@ body {
 .project:hover {
     background-color: #feffff;
     color: #17252a;
+    cursor: pointer;
 }
 
 .project-title {
@@ -212,6 +220,8 @@ body {
 .hobbies-section {
     padding: 20px;
     background-color: #2b7a78;
+    margin-bottom: 30px;
+    padding-bottom: 70px;
 }
 
 .header2 {
@@ -248,7 +258,9 @@ body {
 .hobby-item:hover {    
     transform: scale(1.5); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
+
 /* Typing Effect */
 #role::after {
     content: '|'; 
@@ -258,6 +270,12 @@ body {
     animation: blink 1.8s step-start infinite;
     color: #17252a; 
     font-size: 75px;
+}
+
+/* Act Section */
+.act-section{
+    padding: 20px;
+    background-color: #2b7a78;
 }
 
 @keyframes blink {

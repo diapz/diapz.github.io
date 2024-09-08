@@ -7,14 +7,14 @@
     <title>Fr3yy</title>
 </head>
 <body style="background-color: #3aafa9;">
-    <nav class="navbar">
+    <nav class="navbar"id="myHome">
         <div class="nav_container">
             <img src="elements/logo.jpg" id="nav_logo" alt="Logo">
             <ul class="navbar_menu">
-                <li><a href="#" class="home">Home</a></li>
-                <li><a href="#" class="proj">Projects</a></li>
-                <li><a href="#" class="hub">Hobbies</a></li>
-                <li><a href="#" class="contacts">School Activities</a></li>
+                <li><a href="#myHome" class="home">Home</a></li>
+                <li><a href="#myProjects" class="proj">Projects</a></li>
+                <li><a href="#myHobbies" class="hub">Hobbies</a></li>
+                <li><a href="#schoolAct" class="contacts" id="school-acty">School Activities</a></li>
             </ul>
         </div>
     </nav>
@@ -30,7 +30,7 @@
         </div>
         <img src="elements/face.jpg" alt="Author's Picture" class="circle-image">
     </div>
-    <div class="projects-section">
+    <div class="projects-section" id="myProjects">
         <h1 class="header">My Personal Projects</h1>
         <div class="project-container">
             <div class="project">
@@ -53,10 +53,10 @@
         </div>
     </div>
 
-    <div class="hobbies-section">
+    <div class="hobbies-section" id="myHobbies">
         <h3 class="header2">My Hobbies</h3>
         <div class="hobby-container">
-            <img src="elements/h1.jpg" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h1.jpg" alt="" class="hobby-item">
             <img src="elements/h2.jpg" alt="Skateboarding" class="hobby-item">
             <img src="elements/h3.jpg" alt="Skateboarding" class="hobby-item">
             <img src="elements/h4.png" alt="Skateboarding" class="hobby-item">
@@ -70,6 +70,17 @@
             <img src="elements/h12.jpg" alt="Skateboarding" class="hobby-item">
         </div>
     </div>
+
+    <div class="act-section" onclick="window.open('html/fashionblog', '_blank');" id="schoolAct">
+        <h3 class="header" >School Activities</h3>
+        <div class="project-container">
+            <div class="project">
+                <h3 class="project-title1">Fashion Blog</h3>
+                <img src="elements/fashionBlog.png" alt="Hotel Project" id="project1">
+            </div>
+        </div>
+    </div>
+    
 
     <script src="script.js"></script>
 </body>
