@@ -175,6 +175,7 @@ body {
 }
 
 .project-title {
+    margin-top: 1rem;
     font-size: 1.2rem;
     color: #feffff;
 }
@@ -207,6 +208,22 @@ body {
     height: 61%;
     display: flex; 
     align-items: 0;
+}
+
+#project2b{
+    max-width: 100%;
+    height: 100%;
+    margin-top: 18px;
+    border-radius: 10px;
+    max-height: 40rem;
+}
+
+#project2c{
+    max-width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    border-radius: 10px;
+    max-height: 14.5rem;
 }
 
 #project3{
