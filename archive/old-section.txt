@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="display: flex; justify-content: center; align-items: center;">
+<form action="">
+    <table border="2">
+        <tr>
+            <td colspan="2" class="test" style="text-align: center; font-weight: bold; font-size: 30px;">Registration Form</td>
+        </tr>
+        <tr>
+            <td>Enter Name</td>
+            <td>
+                <input type="txt1" name="txt1" id="txt1">
+            </td>
+        </tr>
+        <tr>
+            <td>Enter Password</td>
+            <td>
+                <input type="password" name="pass2" id="pass3">
+            </td>
+        </tr>
+        <tr>
+            <td>Enter Address</td>
+            <td>
+                <textarea   id="txt2"
+                            rows="4"
+                            cols="30">
+                </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Select Game</td>
+            <td>
+            <form action="">
+                <input type="checkbox"> Hockey 
+                <br>
+                <input type="checkbox"> Football 
+                <br>
+                <input type="checkbox"> Badminton
+                <br>
+                <input type="checkbox"> Cricket
+                <br>
+                <input type="checkbox"> Volleyball
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="male" id="male"> Male
+                <input type="radio" name="male" id="female"> Female
+            </td>
+        </tr>
+        <tr>
+            <td>Select your age</td>
+            <td>
+                <select name="age" id="age">
+                    <option value="noValue">Select</option>
+                    <option value="minor">1-13</option>
+                    <option value="teen">14-20</option>
+                    <option value="adult">21-50</option>
+                    <option value="adultPa">50+ Above</option>
+                    
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Select Photo</td>
+            <td>
+                <input type="file" name="file" id="file">
+            </td>
+        </tr>
+            <td class="t9" colspan="2">
+                <input type="button"
+                        id="btn1"
+                        value="Click Me"/>
+                <input type="reset"
+                        id="res">
+                <input type="submit"
+                        id="sub">
+            </td>
+    </table>
+</form>
+
+</body>
+</html>
+
+
+
+table>form>input:checkbox*5
+
+
+//OLD WEBSITE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fr3yy</title>
+</head>
+<body style="background-color: #3aafa9;">
+    <nav class="navbar"id="myHome">
+        <div class="nav_container">
+            <img src="elements/logo.jpg" id="nav_logo" alt="Logo">
+            <ul class="navbar_menu">
+                <li><a href="#myHome" class="home">Home</a></li>
+                <li><a href="#myProjects" class="proj">Projects</a></li>
+                <li><a href="#myHobbies" class="hub">Hobbies</a></li>
+                <li><a href="#schoolAct" class="contacts" id="school-acty">School Activities</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="mar">
+        <div class="text-container">
+            <h1 class="intro">Hello, I am </h1><span id="role"></span>
+            <p class="about">
+                I'm a 2nd-year Computer Science student by day and a trader and manager by night.
+                I love reading about networking topics and working on Arduino projects.
+                I own three businesses: piso-wifi-vendo, piso-water-vendo, and cat litter.
+            </p>
+        </div>
+        <img src="elements/face.jpg" alt="Author's Picture" class="circle-image">
+    </div>
+    <div class="projects-section" id="myProjects">
+        <h1 class="header">My Personal Projects</h1>
+        <div class="project-container">
+            <div class="project">
+                <h3 class="project-title1">Hotel Management System</h3>
+                <img src="elements/HotelProject.png" alt="Hotel Project" id="project1">
+            </div>
+            <div class="project">
+                <h3 class="project-title">Arduino Uno (Sound Sensor): Bass Sensitivity Indicator</h3>
+                <div id="project2">
+                    <video controls>
+                        <source src="elements/Project2.mp4" type="video/mp4" id="project2">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="project">
+                <h3 class="project-title1">ESP32: Bluetooth Jammer</h3>
+                <img src="elements/Esp32.jpg" alt="ESP32 Project" id="project3">
+            </div>
+        </div>
+    </div>
+
+    <div class="hobbies-section" id="myHobbies">
+        <h3 class="header2">My Hobbies</h3>
+        <div class="hobby-container">
+            <img src="elements/h1.jpg" alt="" class="hobby-item">
+            <img src="elements/h2.jpg" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h3.jpg" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h4.png" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h5.jpg" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h6.JPG" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h7.JPG" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h8.png" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h9.jpg" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h10.jpg" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h11.jpg" alt="Skateboarding" class="hobby-item">
+            <img src="elements/h12.jpg" alt="Skateboarding" class="hobby-item">
+        </div>
+    </div>
+
+    <div class="act-section" id="schoolAct">
+        <h3 class="header" >School Activities</h3>
+        <div class="project-container">
+            <div class="project" onclick="window.open('html/schoolActivities/firstweek.html', '_blank');">
+                <h3 class="project-title">Progress Week-1</h3>
+                <img src="elements/week1.png" alt="Week1 Progress" id="project2c">
+            </div>
+            <div class="project" onclick="window.open('html/schoolActivities/secondweek.html', '_blank');">
+                <h3 class="project-title">Progress Week-2</h3>
+                <div id="project2">
+                <img src="elements/week2.png" alt="Week2 Progress" id="project2b">
+                </div>
+            </div>
+            <div class="project" onclick="window.open('html/fashionblog', '_blank');">
+                <h3 class="project-title1">Fashion Blog</h3>
+                <img src="elements/fashionBlog.png" alt="Hotel Project" id="project1">
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
