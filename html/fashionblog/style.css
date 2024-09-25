@@ -80,7 +80,7 @@ header h3 {
     color: #333; 
 }
 
-/* Blog Content */
+/* Blog Cont */
 .blog-content {
     margin: 20px 0;
 }
@@ -101,7 +101,7 @@ ul li {
     color: #333; 
 }
 
-/* Contact Section */
+/* Contact Sec */
 #contact {
     padding: 20px;
     background-color: #e2e2e2;
@@ -114,7 +114,7 @@ ul li {
     text-align: center;
 }
 
-/* Back to Main Page Link */
+/* Back to Main Page  */
 a.back-to-main {
     display: block;
     text-align: center;
@@ -142,7 +142,7 @@ a.back-to-main:hover {
     font-weight: bold;
 }
 
-/* Responsive Design */
+/* For Resposnive  */
 @media (max-width: 768px) {
     .container {
         width: 90%;

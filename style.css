@@ -46,7 +46,7 @@ body {
 }
 
 .navbar_menu {
-    list-style: none;
+    list-style: none; /* Pang remove sa bullets */
     display: flex;
     margin: 0;
     padding: 0;
