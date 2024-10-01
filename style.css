@@ -167,19 +167,26 @@ body {
     text-align: center;
     transition: background-color 0.3s;
     height: 420px;
-    
 }
 
-.project:hover {
+.project:hover{
     background-color: #feffff;
     color: #17252a;
     cursor: pointer;
 }
 
-.project-title {
+.project-title{
     margin-top: 1rem;
     font-size: 1.2rem;
     color: #feffff;
+}
+
+.project:hover .project-title1{
+    color: #17252a;
+}
+
+.project:hover .project-title{
+    color: #17252a;
 }
 
 .project-title1 {
@@ -235,6 +242,14 @@ body {
     border-radius: 10px;
 }
 
+#project4 {
+    width: 160px;
+    height: 100%;
+    margin-top: 50px;
+    border-radius: 10px;
+    max-height: 14.5rem;
+    object-fit: cover;
+}
 
 
 /* Hobbies Sec */

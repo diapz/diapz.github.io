@@ -33,11 +33,11 @@
     <div class="projects-section" id="myProjects">
         <h1 class="header">My Personal Projects</h1>
         <div class="project-container">
-            <div class="project" onclick="window.open('https://github.com/freeeyyy12/hotel-management-system', '_blank');">
+            <div class="project">
                 <h3 class="project-title1">Hotel Management System</h3>
                 <img src="elements/HotelProject.png" alt="Hotel Project" id="project1">
             </div>
-            <div class="project" onclick="window.open('elements/Project2.mp4', '_blank');">
+            <div class="project">
                 <h3 class="project-title">Arduino Uno (Sound Sensor): Bass Sensitivity Indicator</h3>
                 <div id="project2">
                     <video controls>
@@ -49,10 +49,6 @@
             <div class="project">
                 <h3 class="project-title1">ESP32: Bluetooth Jammer</h3>
                 <img src="elements/Esp32.jpg" alt="ESP32 Project" id="project3">
-            </div>
-            <div class="project" onclick="window.open('activities/personal/index.html', '_blank');">
-                <h3 class="project-title1">Carbon Copy of Codecademy's Survey</h3>
-                <img src="elements/personalCopy.png" alt="ESP32 Project" id="project2">
             </div>
         </div>
     </div>
@@ -72,56 +68,46 @@
             <img src="elements/h10.jpg" alt="Actor's Hubby 10" class="hobby-item">
             <img src="elements/h11.jpg" alt="Actor's Hubby 11" class="hobby-item">
             <img src="elements/h12.jpg" alt="Actor's Hubby 12" class="hobby-item">
-            <img src="elements/h13.jpg" alt="Actor's Hubby 13" class="hobby-item">
-            <img src="elements/h15.jpg" alt="Actor's Hubby 15" class="hobby-item">
-            <img src="elements/h16.jpg" alt="Actor's Hubby 16" class="hobby-item">
-            <img src="elements/h14.jpg" alt="Actor's Hubby 14" class="hobby-item">
         </div>
     </div>
 
     <div class="act-section" id="schoolAct">
-        <h3 class="header" >School Weekly Activities</h3>
-        <div class="project-container">
-            <div class="project" onclick="window.open('activities/schoolActivities/firstweek.html', '_blank');">
-                <h3 class="project-title">Progress Week-1</h3>
-                <img src="elements/week1.png" alt="Week1 Progress" id="project2c">
-</div>
-            <div class="project" onclick="window.open('activities/schoolActivities/secondweek.html', '_blank');">
-                <h3 class="project-title">Progress Week-2</h3>
-                <img src="elements/week2.png" alt="Week2 Progress" id="project2c">
-</div>
-            <div class="project" onclick="window.open('activities/fashionblog/index.html', '_blank');">
-                <h3 class="project-title1">Fashion Blog</h3>
-                <img src="elements/fashionBlog.png" alt="Fashion Blog" id="project2c">
-</div>
-            <div class="project"  onclick="window.open('activities/schoolActivities/tableAct.html', '_blank');">
-                <h3 class="project-title1">Table Activity</h3>
-                <img src="elements/tablePic.png" alt="Table Activity" id="project4">
-</div>
-            <div class="project" onclick="window.open('activities/schoolActivities/formAct.html', '_blank');">
-                <h3 class="project-title1">Activity 2</h3>
-                <img src="elements/formPic.png" alt="Form Activity" id="project4">
-</div>
-            <div class="project" onclick="window.open('activities/schoolActivities/activity2_1.html', '_blank');">
-                <h3 class="project-title1">Activity 2.1</h3>
-                <img src="elements/act2.1.png" alt="Activity 2.1" id="project2c">
-</div>
-            <div class="project" onclick="window.open('activities/schoolActivities/healty-recipes.html', '_blank');">
-                <h3 class="project-title1">Healty Recipes</h3>
-                <img src="elements/healthyres.png" alt="Olivia Woodruff Portfolio" id="project4">
-</div>
-            <div class="project" onclick="window.open('activities/css/woodruff_portfolio.html', '_blank');">
-                <h3 class="project-title1">Olivia Woodruff</h3>
-                <img src="elements/olivia_woodruff_pic.png" alt="Olivia Woodruff Portfolio" id="project4">
-</div>
-            <div class="project" onclick="window.open('https://www.codecademy.com/profiles/giga8160838351', '_blank');">
-                <h3 class="project-title">Codecademy</h3>
-                <img src="elements/codeAcademy.png" alt="Codecademy" id="project4">
-</div>
+        <h3 class="header" >School Activities</h3>
+        <div class="project-table">
+        <table border="5">
+            <tr>
+                <td><div class="project" onclick="window.open('activities/schoolActivities/firstweek.html', '_blank');">
+                    <h3 class="project-title">Progress Week-1</h3>
+                    <img src="elements/week1.png" alt="Week1 Progress" id="project2c">
+                </div></td>
+                <td><div class="project" onclick="window.open('activities/schoolActivities/secondweek.html', '_blank');">
+                    <h3 class="project-title">Progress Week-2</h3>
+                    <div id="project2">
+                    <img src="elements/week2.png" alt="Week2 Progress" id="project2b">
+                    </div></td> 2
+                <td><div class="project" onclick="window.open('activities/fashionblog/index.html', '_blank');">
+                    <h3 class="project-title1">Fashion Blog</h3>
+                    <img src="elements/fashionBlog.png" alt="Hotel Project" id="project1">
+                </div></td>
+                <td><div class="project-container">
+                    <div class="project" onclick="window.open('activities/schoolActivities/tableAct.html', '_blank');">
+                        <h3 class="project-title">Table Activity</h3>
+                        <img src="elements/tablePic.png" alt="Week1 Progress" id="project2c">
+                    </div></td>
+                <td><div class="project-container">
+                    <div class="project" onclick="window.open('activities/schoolActivities/formAct.html', '_blank');">
+                        <h3 class="project-title">Form Activity</h3>
+                        <img src="elements/formPic.png" alt="Week1 Progress" id="project2c">
+                    </div></td>
+                <td><div class="project-container">
+                    <div class="project" onclick="window.open('activities/css/woodruff_portfolio.html', '_blank');">
+                        <h3 class="project-title">Olivia Woodruff Portfolio</h3>
+                        <img src="elements/olivia_woodruff_pic.png" alt="Week1 Progress" id="project2c">
+                    </div></td>    
+            </tr>
 
-
-</div>
-</div>
+        </table>
+    </div>
     
 
     <script src="script.js"></script>
