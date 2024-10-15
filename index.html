@@ -3,13 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="light.css" id="light-style">
     <title>Fr3yy</title>
 </head>
-<body style="background-color: #3aafa9;">
+<body>
+    
     <nav class="navbar"id="myHome">
         <div class="nav_container">
-            <img src="elements/logo.jpg" id="nav_logo" alt="Logo">
+
+            <button onclick="toggleDarkMode()">
+                <svg width="30" height="30" id="icon">
+                  <circle cx="15" cy="15" r="6" fill="currentColor" />
+          
+                  <line
+                    id="ray"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    x1="15"
+                    y1="1"
+                    x2="15"
+                    y2="4"></line>
+          
+                  <use href="#ray" transform="rotate(45 15 15)" />
+                  <use href="#ray" transform="rotate(90 15 15)" />
+                  <use href="#ray" transform="rotate(135 15 15)" />
+                  <use href="#ray" transform="rotate(180 15 15)" />
+                  <use href="#ray" transform="rotate(225 15 15)" />
+                  <use href="#ray" transform="rotate(270 15 15)" />
+                  <use href="#ray" transform="rotate(315 15 15)" />
+                </svg>
+                <svg width="30" height="30" id="dark-icon">
+                  <path
+                    fill="currentColor"
+                    d="
+                    M 23, 5
+                    A 12 12 0 1 0 23, 25
+                    A 12 12 0 0 1 23, 5"
+                  />
+                </svg>
+              </button>
             <ul class="navbar_menu">
                 <li><a href="#myHome" class="home">Home</a></li>
                 <li><a href="#myProjects" class="proj">Projects</a></li>
@@ -53,6 +86,10 @@
             <div class="project" onclick="window.open('activities/personal/index.html', '_blank');">
                 <h3 class="project-title1">Carbon Copy of Codecademy's Survey</h3>
                 <img src="elements/personalCopy.png" alt="Codecademy's Survey" id="project2">
+            </div>
+            <div class="project" onclick="window.open('https://github.com/freeeyyy12/hotel-management-system', '_blank');">
+                <h3 class="project-title1">Hotel Management System</h3>
+                <img src="elements/HotelProject.png" alt="Hotel Project" id="project1">
             </div>
         </div>
     </div>

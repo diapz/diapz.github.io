@@ -1,0 +1,15 @@
+body {
+    font-family: Montserrat;
+    margin: 50px;
+    max-width: 500px;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
+  }
