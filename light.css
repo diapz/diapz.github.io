@@ -9,6 +9,14 @@ html {
     box-sizing: border-box;
 }
 
+#light-icon{
+    margin-left: 1.2 rem;
+}
+
+#dark-icon{
+    margin-left: 1.2 rem;
+}
+
 /**************DARK MODE**************/
 
 button {
@@ -725,6 +733,17 @@ table {
      text-align: center;
 }
 
+.home, .proj, .hub, .contacts {
+   
+}
+
+ul.navbar_menu{
+
+
+.nav_container{
+    
+}
+
 .text-container {
      max-width: 100%;
      margin-left: 0;
@@ -767,5 +786,5 @@ table {
     color: #2b7978; 
     font-size: 40px;
 }
-
+}
 }

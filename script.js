@@ -35,6 +35,7 @@ type();
 
 const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
+
 let darkMode = darkModeMediaQuery.matches;
 
 darkModeMediaQuery.addEventListener("change", (e) => {
@@ -80,3 +81,5 @@ function toggleDarkMode() {
       darkIcon.setAttribute("display", "block");
     }
   }
+
+
