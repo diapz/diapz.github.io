@@ -733,17 +733,6 @@ table {
      text-align: center;
 }
 
-.home, .proj, .hub, .contacts {
-   
-}
-
-ul.navbar_menu{
-
-
-.nav_container{
-    
-}
-
 .text-container {
      max-width: 100%;
      margin-left: 0;
@@ -786,5 +775,5 @@ ul.navbar_menu{
     color: #2b7978; 
     font-size: 40px;
 }
-}
+
 }
