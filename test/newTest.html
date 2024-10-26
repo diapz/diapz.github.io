@@ -4,42 +4,30 @@
     <link rel="shortcut icon" href="elements/logo.jpg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="light.css" id="light-style">
+    <link rel="stylesheet" href="style.css" id="light-style">
     <title>Fr3yy</title>
 </head>
 <body>
     
-    <nav class="navbar" id="myHome">
-        <div class="nav_container">
-            <button onclick="toggleDarkMode()">
-                <svg width="30" height="30" id="light-icon">
-                    <circle cx="15" cy="15" r="6" fill="currentColor" />
-                    <line id="ray" stroke="currentColor" stroke-width="2" stroke-linecap="round" x1="15" y1="1" x2="15" y2="4"></line>
-                    <use href="#ray" transform="rotate(45 15 15)" />
-                    <use href="#ray" transform="rotate(90 15 15)" />
-                    <use href="#ray" transform="rotate(135 15 15)" />
-                    <use href="#ray" transform="rotate(180 15 15)" />
-                    <use href="#ray" transform="rotate(225 15 15)" />
-                    <use href="#ray" transform="rotate(270 15 15)" />
-                    <use href="#ray" transform="rotate(315 15 15)" />
-                </svg>
-                <svg width="30" height="30" id="dark-icon">
-                    <path fill="currentColor" d="M 23, 5 A 12 12 0 1 0 23, 25 A 12 12 0 0 1 23, 5" />
-                </svg>
-            </button>
-            <button class="hamburger" id="hamburger" onclick="toggleMenu()">    
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </button>
-            <ul class="navbar_menu" id="navbar-menu">
-                <li><a href="#myHome" class="home">Home</a></li>
-                <li><a href="#myProjects" class="proj">Projects</a></li>
-                <li><a href="#myHobbies" class="hub">Hobbies</a></li>
-                <li><a href="#schoolAct" class="contacts" id="school-acty">School Activities</a></li>
-            </ul>
-        </div>
-    </nav>
+
+    <input id="toggle" type="checkbox"></input>
+
+    <label for="toggle" class="hamburger">
+      <div class="top-bun"></div>
+      <div class="meat"></div>
+      <div class="bottom-bun"></div>
+    </label>
+    
+    <div class="nav">
+      <div class="nav-wrapper">
+        <nav>
+          <a href="#">HOME</a><br>
+          <a href="#">ABOUT</a><br>
+          <a href="#">WORK</a><br>
+          <a href="#">SERVICES</a>
+        </nav>
+      </div>
+    </div>
 
 
     

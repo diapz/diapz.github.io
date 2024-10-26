@@ -47,7 +47,10 @@ darkModeMediaQuery.addEventListener("change", (e) => {
 });
 
 function drawBuildings() {
-  // ... building drawing logic with dark mode color adjustment (unchanged)
+ state.buildings.forEach((building) => {
+    ctx.fillStyle = darkMode ? "#254D7E" : "#947285";
+    ctx.fillRect(building.x, 0, building.width, building.height);
+  });
 }
 
 const lightIcon = document.getElementById("light-icon");
