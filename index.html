@@ -55,7 +55,6 @@
 
     <div class="mar">
         <div class="text-container">
-            <h1 class="intro">Hello, I am </h1><span id="role"></span>
             <p class="about">
                 <span id="greeting">Loading your personalized greeting...</span> <br><br>
                 I'm a 2nd-year Computer Science student by day and a trader and manager by night.
@@ -64,32 +63,38 @@
               </p>
               
               <script>
-                window.onload = function() {
-                  const ipstackAccessKey = "c9553591bb97b1644a15ef5bcf0b8f5a"; 
-                  const weatherstackAccessKey = "2d7b414e05e756cfb88cf4063633a731"; 
+                window.onload = async function() {
+                  const ipstackAccessKey = "0a85ede89b79b6e7ae34a4d49d51cc7f"; 
+                  const weatherstackAccessKey = "7d754b07378bcc7561cd61a9dc8ed106"; 
               
-                  // Set fixed IP address (no need to use the IPStack API)
                   const ipAddress = "134.201.250.155"; // Static IP address
-                  const country = "Philippines"; // Fixed country, since we're using a static IP
-                  
-                  // Fetching weather data using HTTPS
-                  const weatherstackUrl = `https://api.weatherstack.com/current?access_key=${weatherstackAccessKey}&query=${country}&units=m&language=en`;
+                  const country = "Philippines"; // Static country
               
-                  fetch(weatherstackUrl)
-                    .then(response => response.json())
-                    .then(weatherData => {
-                      console.log("WeatherStack Data:", weatherData);  // Debugging the WeatherStack response
-                      const temperature = weatherData.current.temperature;
-                      const weatherDescription = weatherData.current.weather_descriptions[0];
+                  try {
+                    // Fetching location data using IPStack
+                    const ipstackUrl = `https://api.ipstack.com/${ipAddress}?access_key=${ipstackAccessKey}`;
+                    const ipstackResponse = await fetch(ipstackUrl);
+                    const ipstackData = await ipstackResponse.json();
+                    console.log("IPStack Data:", ipstackData);  // Debugging the IPStack response
+                    const countryName = ipstackData.location.country_name;
               
-                      const greetingElement = document.getElementById('greeting');
-                      greetingElement.textContent = `Hello viewer from ${ipAddress} (${country}), your weather for today is ${temperature}°C with ${weatherDescription.toLowerCase()}.`;
-                    })
-                    .catch(error => {
-                      console.error("Error:", error);
-                      const greetingElement = document.getElementById('greeting');
-                      greetingElement.textContent = "Sorry, we couldn't fetch your data at the moment.";
-                    });
+                    // Fetching weather data using WeatherStack
+                    const weatherstackUrl = `https://api.weatherstack.com/current?access_key=${weatherstackAccessKey}&query=${countryName}&units=m&language=en`;
+                    const weatherstackResponse = await fetch(weatherstackUrl);
+                    const weatherstackData = await weatherstackResponse.json();
+                    console.log("WeatherStack Data:", weatherstackData);  // Debugging the WeatherStack response
+                    const temperature = weatherstackData.current.temperature;
+                    const weatherDescription = weatherstackData.current.weather_descriptions[0];
+              
+                    // Display greeting with IP and weather information
+                    const greetingElement = document.getElementById('greeting');
+                    greetingElement.textContent = `Grettings! Traveller from ${ipAddress} (${countryName}), your weather for today is ${temperature}°C with ${weatherDescription.toLowerCase()}.`;
+                    
+                  } catch (error) {
+                    console.error("Error:", error);
+                    const greetingElement = document.getElementById('greeting');
+                    greetingElement.textContent = "Sorry, we couldn't fetch your data at the moment.";
+                  }
                 };
               </script>              
         </div>
