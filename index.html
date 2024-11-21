@@ -55,48 +55,49 @@
 
     <div class="mar">
         <div class="text-container">
+            <h1 class="intro">Hello, I am </h1><span id="role"></span>
             <p class="about">
                 <span id="greeting">Loading your personalized greeting...</span> <br><br>
                 I'm a 2nd-year Computer Science student by day and a trader and manager by night.
                 I love reading about networking topics and working on Arduino projects.
                 I own three businesses: piso-wifi-vendo, piso-water-vendo, and cat litter.
-              </p>
-              
-              <script>
-                window.onload = async function() {
-                  const ipstackAccessKey = "0a85ede89b79b6e7ae34a4d49d51cc7f"; 
-                  const weatherstackAccessKey = "7d754b07378bcc7561cd61a9dc8ed106"; 
-              
-                  const ipAddress = "134.201.250.155"; // Static IP address
-                  const country = "Philippines"; // Static country
-              
-                  try {
-                    // Fetching location data using IPStack
-                    const ipstackUrl = `https://api.ipstack.com/${ipAddress}?access_key=${ipstackAccessKey}`;
-                    const ipstackResponse = await fetch(ipstackUrl);
-                    const ipstackData = await ipstackResponse.json();
-                    console.log("IPStack Data:", ipstackData);  // Debugging the IPStack response
-                    const countryName = ipstackData.location.country_name;
-              
-                    // Fetching weather data using WeatherStack
-                    const weatherstackUrl = `https://api.weatherstack.com/current?access_key=${weatherstackAccessKey}&query=${countryName}&units=m&language=en`;
-                    const weatherstackResponse = await fetch(weatherstackUrl);
-                    const weatherstackData = await weatherstackResponse.json();
-                    console.log("WeatherStack Data:", weatherstackData);  // Debugging the WeatherStack response
-                    const temperature = weatherstackData.current.temperature;
-                    const weatherDescription = weatherstackData.current.weather_descriptions[0];
-              
-                    // Display greeting with IP and weather information
-                    const greetingElement = document.getElementById('greeting');
-                    greetingElement.textContent = `Grettings! Traveller from ${ipAddress} (${countryName}), your weather for today is ${temperature}°C with ${weatherDescription.toLowerCase()}.`;
+            </p>
+            
+            <script>
+                window.onload = function() {
+                    const ipstackAccessKey = "0a85ede89b79b6e7ae34a4d49d51cc7f"; 
+                    const weatherstackAccessKey = "27d754b07378bcc7561cd61a9dc8ed106"; 
+            
+                    const ipAddress = "134.201.250.155"; // Static IP address
+                    const country = "Philippines"; // Static country
                     
-                  } catch (error) {
-                    console.error("Error:", error);
-                    const greetingElement = document.getElementById('greeting');
-                    greetingElement.textContent = "Sorry, we couldn't fetch your data at the moment.";
-                  }
+                    // Correct string interpolation for weatherstack API URL
+                    const weatherstackUrl = `https://api.weatherstack.com/current?access_key=${weatherstackAccessKey}&query=${country}&units=m&language=en`;
+            
+                    fetch(weatherstackUrl)
+                        .then(response => response.json())
+                        .then(weatherData => {
+                            console.log("WeatherStack Data:", weatherData);  // Log the full API response for debugging
+                            
+                            // Check if 'current' is defined in the response
+                            if (weatherData && weatherData.current) {
+                                const temperature = weatherData.current.temperature;
+                                const weatherDescription = weatherData.current.weather_descriptions[0];
+            
+                                const greetingElement = document.getElementById('greeting');
+                                greetingElement.textContent = `Hello viewer from ${ipAddress} (${country}), your weather for today is ${temperature}°C with ${weatherDescription.toLowerCase()}.`;
+                            } else {
+                                const greetingElement = document.getElementById('greeting');
+                                greetingElement.textContent = "Sorry, we couldn't fetch your weather data at the moment.";
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Error fetching weather data:", error);
+                            const greetingElement = document.getElementById('greeting');
+                            greetingElement.textContent = "Sorry, we couldn't fetch your weather data at the moment.";
+                        });
                 };
-              </script>              
+            </script>   
         </div>
         <img src="elements/face.jpg" alt="Author's Picture" class="circle-image">
     </div>

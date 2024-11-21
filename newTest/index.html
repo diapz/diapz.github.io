@@ -1,53 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personalized Weather Greeting</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Calling Demo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome!</h1>
-  <div id="greeting">Loading your personalized greeting...</div>
+    <h1>API Call Demo</h1>
+    
+    <span class="greet">Hi</span>
+    <h3>Todo: 2</h3>
+    <div id="todo1_id">0</div>
+    <div id="todo1_title">1</div>
+    <div id="todo1_completed">1</div>
 
-  <script>
-    window.onload = function() {
-      const ipstackAccessKey = "YOUR_IPSTACK_ACCESS_KEY"; // Replace with your IPStack access key
-      const weatherstackAccessKey = "YOUR_WEATHERSTACK_ACCESS_KEY"; // Replace with your WeatherStack access key
-
-      // IPStack API to get the user's IP and location
-      const ipstackUrl = `http://api.ipstack.com/check?access_key=${ipstackAccessKey}&fields=ip,location&hostname=1&language=en`;
-
-      fetch(ipstackUrl)
-        .then(response => response.json())
-        .then(ipData => {
-          const ipAddress = ipData.ip;
-          const country = ipData.location.country_name;
-
-          // Fetch weather information for the detected country
-          const weatherstackUrl = `http://api.weatherstack.com/current?access_key=${weatherstackAccessKey}&query=${country}&units=m&language=en`;
-
-          return fetch(weatherstackUrl).then(response => response.json()).then(weatherData => {
-            const temperature = weatherData.current.temperature;
-            const weatherDescription = weatherData.current.weather_descriptions[0];
-
-            // Display personalized greeting
-            const greetingElement = document.getElementById('greeting');
-            greetingElement.textContent = `Hello viewer from ${ipAddress} (${country}), your weather for today is ${temperature}°C with ${weatherDescription.toLowerCase()}.`;
-          });
-        })
-        .catch(error => {
-          console.error("Error:", error);
-          const greetingElement = document.getElementById('greeting');
-          greetingElement.textContent = "Sorry, we couldn't fetch your data at the moment.";
-        });
-    };
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
