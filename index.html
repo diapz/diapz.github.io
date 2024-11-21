@@ -57,10 +57,46 @@
         <div class="text-container">
             <h1 class="intro">Hello, I am </h1><span id="role"></span>
             <p class="about">
+                <span id="greeting">Loading your personalized greeting...</span> <br>
+                <br>
                 I'm a 2nd-year Computer Science student by day and a trader and manager by night.
                 I love reading about networking topics and working on Arduino projects.
                 I own three businesses: piso-wifi-vendo, piso-water-vendo, and cat litter.
-            </p>
+              </p>
+            
+              <script>
+                window.onload = function() {
+                  const ipstackAccessKey = "355d9c33bb017a2025db65a30a223620"; 
+                  const weatherstackAccessKey = "db22f6abf8eecb73467e70f4340992ab"; 
+            
+                  
+                  const ipstackUrl = `http://api.ipstack.com/check?access_key=${ipstackAccessKey}&fields=ip,location&hostname=1&language=en`;
+            
+                  fetch(ipstackUrl)
+                    .then(response => response.json())
+                    .then(ipData => {
+                      const ipAddress = ipData.ip;
+                      const country = ipData.location.country_name;
+            
+                      
+                      const weatherstackUrl = `http://api.weatherstack.com/current?access_key=${weatherstackAccessKey}&query=${country}&units=m&language=en`;
+            
+                      return fetch(weatherstackUrl).then(response => response.json()).then(weatherData => {
+                        const temperature = weatherData.current.temperature;
+                        const weatherDescription = weatherData.current.weather_descriptions[0];
+            
+                        
+                        const greetingElement = document.getElementById('greeting');
+                        greetingElement.textContent = ` Hello viewer from ${ipAddress} (${country}), your weather for today is ${temperature}°C with ${weatherDescription.toLowerCase()}.`;
+                      });
+                    })
+                    .catch(error => {
+                      console.error("Error:", error);
+                      const greetingElement = document.getElementById('greeting');
+                      greetingElement.textContent = " Sorry, we couldn't fetch your data at the moment.";
+                    });
+                };
+              </script>
         </div>
         <img src="elements/face.jpg" alt="Author's Picture" class="circle-image">
     </div>

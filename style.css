@@ -3,6 +3,16 @@ html {
     scroll-behavior: smooth;
 }
 
+#greeting{
+    margin-top: 30px;
+    font-size: 15px;
+    color: #feffff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: justify;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -386,6 +396,10 @@ table {
 
 .about{
     margin-top: 10px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;
 }
 
 #role::after {
