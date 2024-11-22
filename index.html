@@ -83,7 +83,7 @@
                                 const weatherDescription = weatherData.current.weather_descriptions[0];
             
                                 const greetingElement = document.getElementById('greeting');
-                                greetingElement.textContent = `Ahoy! traveller, your IP address is ${ipAddress} (${country}). 🇵🇭 The current weather in your country is ${temperature}°C with a forecast of ${weatherDescription.toLowerCase()} We recommend preparing accordingly, whether that means packing sunglasses or an umbrella. `;
+                                greetingElement.textContent = `Ahoy! traveller, your IP address is ${ipAddress} (${country}). The current weather in your country is ${temperature}°C with a forecast of ${weatherDescription.toLowerCase()} We recommend preparing accordingly, whether that means packing sunglasses or an umbrella. `;
                             } else {
                                 const greetingElement = document.getElementById('greeting');
                                 greetingElement.textContent = "Sorry, we couldn't fetch your weather data at the moment.";
