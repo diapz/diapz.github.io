@@ -20,7 +20,7 @@ function callAPI(){
 greet("Clyde"); //Hello Clyde
 callAPI();
 
-const accessKey = "YOUR_ACCESS_KEY";
+const accessKey = "";
 const fields = "ip,location,security";
 const hostname = 1;
 const security = 1;

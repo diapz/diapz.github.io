@@ -394,7 +394,31 @@ button {
     font-size: 40px;
 }
 
+.dark-mode .navbar_menu{
+    display: none;
 }
+
+.dark-mode .home{
+    display: none;  
+}
+
+.dark-mode .proj{
+    display: none;
+}
+
+.dark-mode .hub{
+    display: none;
+}
+.dark-mode .contacts{
+    display: none;
+}
+.dark-mode .school-acty{
+    display: none;
+}
+
+}
+
+
 
 /**************DARK MODE**************/
 
@@ -732,6 +756,31 @@ table {
      align-items: center;
      text-align: center;
 }
+
+
+.navbar_menu{
+    display: none;
+}
+
+.home{
+    display: none;  
+}
+
+.proj{
+    display: none;
+}
+
+.hub{
+    display: none;
+}
+.contacts{
+    display: none;
+}
+.school-acty{
+    display: none;
+}
+
+
 
 .text-container {
      max-width: 100%;
